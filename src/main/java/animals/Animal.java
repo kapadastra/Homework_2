@@ -1,0 +1,87 @@
+package animals;
+
+
+public abstract class Animal {
+
+    private String name;
+    private Integer age;
+    private Integer weight;
+    private String color;
+
+
+    public Animal(String name, Integer age, Integer weight, String color) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.color = color;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Integer weight) {
+        this.weight = weight;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void Say() {
+        System.out.println("Я говорю");
+    }
+
+    public void Go() {
+        System.out.println("Я иду");
+    }
+
+    public void Drink() {
+        System.out.println("Я пью");
+    }
+
+    public void Eat() {
+        System.out.println("Я ем");
+    }
+
+
+    @Override
+    public String toString() {
+        //определения год\лет\года
+        String year = "лет";
+        int lastButOneCharacterAge = age / 10;
+        int lastCharacterAge = age % 10;
+
+        if (lastButOneCharacterAge == 1) {
+            return  year;
+        } else if (lastCharacterAge == 1) {
+            year = "год";
+        } else if (lastCharacterAge == 2 || lastCharacterAge == 3 || lastCharacterAge == 4) {
+            year = "года";
+        }
+
+        return "Привет! меня зовут " + name + ", мне " + age + " " + year + ", я вешу - " + weight + " кг, мой цвет - " + color;
+
+
+    }
+}
