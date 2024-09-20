@@ -85,14 +85,10 @@ public class Main {
                 }
 
                 case LIST: {
-//                    if (animals.isEmpty()) {
-//                        System.out.print("Список пуст, ");
-//                    } else {
+
                         for (String animal : animals) {
                             System.out.println(animal);
                         }
-
-                    //}
                     break;
                 }
                 case EXIT: {
