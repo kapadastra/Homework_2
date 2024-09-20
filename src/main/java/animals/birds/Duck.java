@@ -10,7 +10,7 @@ public class Duck extends Animal implements Flying {
 
 
     @Override
-    public void Say() {
+    public void say() {
         System.out.println("Кря");
     }
 

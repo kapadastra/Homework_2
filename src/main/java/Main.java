@@ -75,7 +75,7 @@ public class Main {
                         try {
                             Animal newAnimal = AnimalFactory.createAnimal(animalType, animalName, animalAge, animalWeight, animalColor);
                             animals.add(String.valueOf(newAnimal));
-                            newAnimal.Say();
+                            newAnimal.say();
                         } catch (IllegalArgumentException e) {
                             System.out.println(e.getMessage());
                         }
@@ -85,14 +85,14 @@ public class Main {
                 }
 
                 case LIST: {
-                    if (animals.isEmpty()) {
-                        System.out.print("Список пуст, ");
-                    } else {
+//                    if (animals.isEmpty()) {
+//                        System.out.print("Список пуст, ");
+//                    } else {
                         for (String animal : animals) {
                             System.out.println(animal);
                         }
 
-                    }
+                    //}
                     break;
                 }
                 case EXIT: {

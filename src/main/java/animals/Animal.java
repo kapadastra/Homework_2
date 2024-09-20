@@ -48,19 +48,19 @@ public abstract class Animal {
         this.color = color;
     }
 
-    public void Say() {
+    public void say() {
         System.out.println("Я говорю");
     }
 
-    public void Go() {
+    public void go() {
         System.out.println("Я иду");
     }
 
-    public void Drink() {
+    public void drink() {
         System.out.println("Я пью");
     }
 
-    public void Eat() {
+    public void eat() {
         System.out.println("Я ем");
     }
 
