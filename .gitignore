@@ -7,9 +7,3 @@
 *.iml
 *.ipr
 *.idea
-
-### pom ###
-pom.xml
-
-### target ###
-target

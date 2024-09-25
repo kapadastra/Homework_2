@@ -73,7 +73,7 @@ public abstract class Animal {
         int lastCharacterAge = age % 10;
 
         if (lastButOneCharacterAge == 1) {
-            return  year;
+            return year;
         } else if (lastCharacterAge == 1) {
             year = "год";
         } else if (lastCharacterAge == 2 || lastCharacterAge == 3 || lastCharacterAge == 4) {

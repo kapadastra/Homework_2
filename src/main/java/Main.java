@@ -35,7 +35,7 @@ public class Main {
             }
 
             if (!isComValid) {
-                System.out.println("Недопустимая команда.\\n Введите команду из списка ADD,LIST,EXIT: ");
+                System.out.println("Недопустимая команда.\n");
                 continue;
             }
 
@@ -57,7 +57,7 @@ public class Main {
                         }
 
                         if (!isAnimalValid) {
-                            System.out.println("Недопустимый тип животного.\\n Введите тип животного CAT,DOG,DUCK: ");
+                            System.out.println("Недопустимый тип животного.\n");
                             continue;
                         }
 
@@ -86,9 +86,9 @@ public class Main {
 
                 case LIST: {
 
-                        for (String animal : animals) {
-                            System.out.println(animal);
-                        }
+                    for (String animal : animals) {
+                        System.out.println(animal);
+                    }
                     break;
                 }
                 case EXIT: {

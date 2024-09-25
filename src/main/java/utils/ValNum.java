@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 
 public class ValNum {
 
+
     private Scanner scanner;
 
     public ValNum(Scanner scanner) {
@@ -16,25 +17,22 @@ public class ValNum {
     public int inputValNum(String mes) {
         boolean isVal = false;
         int inputNum = 0;
-        do {
+
+        while (!isVal) {
             System.out.println(mes + ", значение должно быть от 1 до 100");
-            try {
+            if (scanner.hasNextInt()) {
                 inputNum = scanner.nextInt();
-                if (inputNum > 0 && inputNum <= 100) {
+                if (inputNum >= 1 && inputNum <= 100) {
                     isVal = true;
                 } else {
-                    System.out.println("Значение должно быть от 1 до 100");
+                    System.out.println("Число вне диапазона. Попробуйте снова.");
                 }
-            } catch (InputMismatchException error) {
-                System.out.println("Вводите цифры");
-                scanner.nextInt();
+            } else {
+                scanner.next();
+                System.out.println("Некорректный ввод.");
             }
         }
-        while (!isVal);
-        scanner.nextLine();
         return inputNum;
-
-
     }
 
 
